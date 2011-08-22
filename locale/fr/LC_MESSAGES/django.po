@@ -80,7 +80,7 @@ msgstr "Un"
 
 #: templates/base.html:76
 msgid "Two"
-msgstr "Two"
+msgstr "Deux"
 
 #: templates/base.html:77
 msgid "Three"
@@ -115,7 +115,7 @@ msgstr "Fixer vos préférences de langages"
 
 #: templates/i18ninfos.html:39
 msgid "Change"
-msgstr ""
+msgstr "Changer"
 
 #: templates/i18ninfos.html:43
 msgid "View this page page in : "
@@ -126,18 +126,18 @@ msgid ""
 "\n"
 "\t\t<p>This is the content of page one.</p>\n"
 "\t    "
-msgstr ""
+msgstr "<p>Le contenu de la première page</p>"
 
 #: templates/three.html:8
 msgid ""
 "\n"
 "\t\t<p>This is the content of page three.</p>\n"
 "\t    "
-msgstr ""
+msgstr "<p>Le contenu de la troisième page.</p>"
 
 #: templates/two.html:8
 msgid ""
 "\n"
 "\t\t<p>This is the content of page two.</p>\n"
 "\t    "
-msgstr ""
+msgstr "<p>Le contenu de la seconde page.</p>"

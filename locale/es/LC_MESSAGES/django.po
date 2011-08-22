@@ -20,7 +20,7 @@ msgstr ""
 
 #: settings.py:55
 msgid "English"
-msgstr ""
+msgstr "Ingles"
 
 #: settings.py:56
 msgid "Castellano"
@@ -28,11 +28,11 @@ msgstr ""
 
 #: settings.py:57
 msgid "Français"
-msgstr ""
+msgstr "Frances"
 
 #: urls.py:25
 msgid "homepage"
-msgstr ""
+msgstr "Pagina de inicio"
 
 #: urls.py:26
 msgid "^one/"
@@ -40,23 +40,23 @@ msgstr ""
 
 #: urls.py:26 templates/one.html:7
 msgid "one"
-msgstr ""
+msgstr "un"
 
 #: urls.py:27
 msgid "^two/"
-msgstr ""
+msgstr "^dos/"
 
 #: urls.py:27 templates/two.html:7
 msgid "two"
-msgstr ""
+msgstr "dos"
 
 #: urls.py:28
 msgid "^three/"
-msgstr ""
+msgstr "^tres/"
 
 #: urls.py:28 templates/three.html:7
 msgid "three"
-msgstr ""
+msgstr "tres"
 
 #: templates/base.html:71
 msgid "Back to homepage, "
@@ -64,34 +64,34 @@ msgstr ""
 
 #: templates/base.html:71
 msgid "Evaluating Django i18n"
-msgstr ""
+msgstr "Evaluacion de Django i18n"
 
 #: templates/base.html:72
 msgid "Some tests around the Django Internationalization machinery"
-msgstr ""
+msgstr "Django Internationalization"
 
 #: templates/base.html:74 templates/homepage.html:7
 msgid "Homepage"
-msgstr ""
+msgstr "Inicio"
 
 #: templates/base.html:75
 msgid "One"
-msgstr ""
+msgstr "Un"
 
 #: templates/base.html:76
 msgid "Two"
-msgstr ""
+msgstr "Dos"
 
 #: templates/base.html:77
 msgid "Three"
-msgstr ""
+msgstr "Tres"
 
 #: templates/homepage.html:8
 msgid ""
 "\n"
 "\t\t<p>This is a paragraph inside a 'blocktrans' django template tag.</p>\n"
 "\t    "
-msgstr ""
+msgstr "<p>Es un paragrafo a l'interior del 'blocktrans' django template tag.</p>"
 
 #: templates/i18ninfos.html:4
 msgid "Informations"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: templates/i18ninfos.html:39
 msgid "Change"
-msgstr ""
+msgstr "Cambiar"
 
 #: templates/i18ninfos.html:43
 msgid "View this page page in : "
@@ -126,18 +126,18 @@ msgid ""
 "\n"
 "\t\t<p>This is the content of page one.</p>\n"
 "\t    "
-msgstr ""
+msgstr "<p>Pagina una.</p>"
 
 #: templates/three.html:8
 msgid ""
 "\n"
 "\t\t<p>This is the content of page three.</p>\n"
 "\t    "
-msgstr ""
+msgstr "<p>Pagina tres.</p"
 
 #: templates/two.html:8
 msgid ""
 "\n"
 "\t\t<p>This is the content of page two.</p>\n"
 "\t    "
-msgstr ""
+msgstr "<p>Pagina dos.</p"
