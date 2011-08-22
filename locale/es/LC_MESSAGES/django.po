@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-22 11:05-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: settings.py:55
+msgid "English"
+msgstr ""
+
+#: settings.py:56
+msgid "Castellano"
+msgstr ""
+
+#: settings.py:57
+msgid "Français"
+msgstr ""
+
+#: urls.py:25
+msgid "homepage"
+msgstr ""
+
+#: urls.py:26
+msgid "^one/"
+msgstr ""
+
+#: urls.py:26 templates/one.html:7
+msgid "one"
+msgstr ""
+
+#: urls.py:27
+msgid "^two/"
+msgstr ""
+
+#: urls.py:27 templates/two.html:7
+msgid "two"
+msgstr ""
+
+#: urls.py:28
+msgid "^three/"
+msgstr ""
+
+#: urls.py:28 templates/three.html:7
+msgid "three"
+msgstr ""
+
+#: templates/base.html:71
+msgid "Back to homepage, "
+msgstr ""
+
+#: templates/base.html:71
+msgid "Evaluating Django i18n"
+msgstr ""
+
+#: templates/base.html:72
+msgid "Some tests around the Django Internationalization machinery"
+msgstr ""
+
+#: templates/base.html:74 templates/homepage.html:7
+msgid "Homepage"
+msgstr ""
+
+#: templates/base.html:75
+msgid "One"
+msgstr ""
+
+#: templates/base.html:76
+msgid "Two"
+msgstr ""
+
+#: templates/base.html:77
+msgid "Three"
+msgstr ""
+
+#: templates/homepage.html:8
+msgid ""
+"\n"
+"\t\t<p>This is a paragraph inside a 'blocktrans' django template tag.</p>\n"
+"\t    "
+msgstr ""
+
+#: templates/i18ninfos.html:4
+msgid "Informations"
+msgstr ""
+
+#: templates/i18ninfos.html:6
+msgid "Current language"
+msgstr ""
+
+#: templates/i18ninfos.html:17
+msgid "Available language"
+msgstr ""
+
+#: templates/i18ninfos.html:27
+msgid "Actions"
+msgstr ""
+
+#: templates/i18ninfos.html:30
+msgid "Set your language preferences : "
+msgstr ""
+
+#: templates/i18ninfos.html:39
+msgid "Change"
+msgstr ""
+
+#: templates/i18ninfos.html:43
+msgid "View this page page in : "
+msgstr ""
+
+#: templates/one.html:8
+msgid ""
+"\n"
+"\t\t<p>This is the content of page one.</p>\n"
+"\t    "
+msgstr ""
+
+#: templates/three.html:8
+msgid ""
+"\n"
+"\t\t<p>This is the content of page three.</p>\n"
+"\t    "
+msgstr ""
+
+#: templates/two.html:8
+msgid ""
+"\n"
+"\t\t<p>This is the content of page two.</p>\n"
+"\t    "
+msgstr ""
