@@ -1,0 +1,108 @@
+{% load i18n %}<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ params.title }}</title>
+    <meta name="description" content="">
+    <meta name="author" content="Franck Bret">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<style type="text/css">
+	body{
+	      background-color:#efefef;
+	      color:#666;
+	}
+	h1,h2{
+	  color:#297099;
+	}
+	h1{
+	  font-size:3.2em;
+	}
+	h2{
+	  font-size:2.4em;
+	}
+	div{
+	    padding : 1em;
+	    margin : 1em;
+	    border:2px solid #ddd;
+	}
+	div.header-container{
+	      background-color:#e6e6e6;
+	}
+	div.main-container{
+	      background-color:#e6e6e6;
+	}
+	div.content{
+	      background:#AAE0FF;color:#297099;border-color:#45BBFF;
+	      width:65%;
+	      float:left;
+	}
+	div.sidebar{
+	      background:#AAE0FF;color:#297099;border-color:#45BBFF;
+	      margin-left:70%;
+	}
+	div.site-info-container{
+	      background-color:#e6e6e6;
+	}
+	/* Contain floats: h5bp.com/q */
+	.clearfix:before, .clearfix:after { content: ""; display: table; }
+	.clearfix:after { clear: both; }
+	.clearfix { *zoom: 1; border:none; }
+	ul.navigation li{display:inline-block;}
+	
+	.error, .notice, .success, .valid, .errorlist {padding:8px;margin-bottom:16px;border:2px solid #ddd;}
+	.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
+	.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+	.valid {background:#AAE0FF;color:#297099;border-color:#45BBFF;}
+	.error a {color:#8a1f11;}
+	.notice a {color:#514721;}
+	.success a {color:#264409;}
+	.valid a{color:#297099;}
+	
+	</style>
+</head>
+
+<body class="{% block body-class %}default{% endblock body-class %}">
+    {% block wrapper %}
+    <div class="wrapper">
+        {% block header-container %}
+	    <div class="header-container">
+	    {% block header %}
+		      <h1><a href="/" title="{% trans "Back to homepage, " %}" class="logo" >{% trans "Evaluating Django i18n" %}</a></h1>
+		      <h2 class="baseline">{% trans "Some tests around the Django Internationalization machinery" %}</h2>
+		      <ul class="navigation success">
+			      <li><a  href="{% url homepage %}" title="{% trans "Homepage" %}">{% trans "Homepage" %}</a></li>
+			      <li><a  href="{% url one %}" title="{% trans "One" %}">{% trans "One" %}</a></li>
+			      <li><a  href="{% url two %}" title="{% trans "Two" %}">{% trans "Two" %}</a></li>
+			      <li><a  href="{% url three %}" title="{% trans "Three" %}">{% trans "Three" %}</a></li>
+		      </ul>
+	    {% endblock header %}
+	    </div>
+	    {% endblock header-container %}
+	    {% block main-container %}
+	    <div class="main-container">
+		{% block content %}
+		<div class="content">
+			      <p>Hello world !</p>
+		</div>
+		{% endblock content %}
+		{% block sidebar %}
+		<div class="sidebar">
+			      <p>This is french</p>
+		</div>
+		{% endblock sidebar %}
+	    	<div class="clearfix"> </div>
+	    </div>
+	    {% endblock main-container %}
+
+    </div>
+    {% endblock wrapper %}
+    {% block site-info-container %}
+    <div class="site-info-container">
+	  <div class="footer">
+		<p></p>
+	  </div>
+    </div>
+    {% endblock site-info-container %}
+</body>
+</html>

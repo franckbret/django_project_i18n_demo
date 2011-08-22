@@ -1,0 +1,70 @@
+{% load i18n urls_extras %}
+{% block sidebar %}
+<div class="notice">
+	<h3>{% trans "Informations" %}</h3>
+	<div class="notice">
+		<h3>{% trans "Current language" %}</h3>
+	<ul>
+	{% get_current_language as LANGUAGE_CODE %}
+	<li>LANGUAGE_CODE : {{ LANGUAGE_CODE }}</li>
+	{% get_current_language_bidi as LANGUAGE_BIDI %}
+	<li>LANGUAGE_BIDI : {{ LANGUAGE_BIDI }}</li>
+	{% current_url as myurl %}
+	<li>current_url : {{ myurl }}</li>
+	</ul>
+	</div>
+	<div class="notice">
+		<h3>{% trans "Available language" %}</h3>
+		<ul>
+		{% get_available_languages as LANGUAGES %}
+			{% for language in LANGUAGES %}
+			<li>{{ language.0 }} : {{ language.1 }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="notice">
+	<h3>{% trans "Actions" %}</h3>
+	<div class="notice">
+		<form action="/i18n/setlang/" method="post">
+			{% trans "Set your language preferences : " %}
+			{% csrf_token %}
+			<input name="next" type="hidden" value="/" />
+			<select name="language">
+				{% get_language_info_list for LANGUAGES as languages %}
+				{% for language in languages %}
+				<option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected="selected"{% endif %}>{{ language.name_local }} ({{ language.code }})</option>
+				{% endfor %}
+			</select>
+			<input type="submit" value="{% trans "Change" %}" />
+		</form>
+	</div>
+	<div class="notice">
+		<h3>{% trans "View this page page in : " %}</h3>
+		<ul>
+		{% get_available_languages as LANGUAGES %}
+			{% for language in LANGUAGES %}
+			<li>{{ language.0 }} : {{ language.1 }}</li>
+		{% endfor %}
+		<li>
+{% comment %}
+		{% trans "View this page in" %} :
+		{% for lang_code, lang_name in LANGUAGES %}
+		    {% current_url as myurl %}
+		    {% if lang_code != LANGUAGE_CODE %}
+		    {% language lang_code %}
+		    <a href="{% url myurl %}" title="{% trans "View this page in" %} {{ lang_name }}">{{ lang_name }}</a>
+		    {% endlanguage %}
+		    {% endif %}
+		{% endfor %}
+{% endcomment %}
+		</li>
+	  
+
+		</ul>
+	</div>
+</div>
+
+{% endblock sidebar %}
+
+ 
