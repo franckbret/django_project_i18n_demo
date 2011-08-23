@@ -5,6 +5,7 @@
 *.tmp
 *.swp
 *.rej
+*.ini
 .installed.cfg
 .DS_Store
 *.bak
