@@ -84,7 +84,7 @@ msgstr "Deux"
 
 #: templates/base.html:77
 msgid "Three"
-msgstr "Three"
+msgstr "Trois"
 
 #: templates/homepage.html:8
 msgid ""

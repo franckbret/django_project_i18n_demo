@@ -33,21 +33,18 @@
 	      background-color:#e6e6e6;
 	}
 	div.content{
-	      background:#AAE0FF;color:#297099;border-color:#45BBFF;
+	      background:#E6EFC2;color:#264409;border-color:#C6D880;
 	      width:65%;
 	      float:left;
 	}
 	div.sidebar{
-	      background:#AAE0FF;color:#297099;border-color:#45BBFF;
+	      background:#FFF6BF;color:#514721;border-color:#FFD324;
 	      margin-left:70%;
 	}
 	div.site-info-container{
 	      background-color:#e6e6e6;
 	}
-	/* Contain floats: h5bp.com/q */
-	.clearfix:before, .clearfix:after { content: ""; display: table; }
-	.clearfix:after { clear: both; }
-	.clearfix { *zoom: 1; border:none; }
+
 	ul.navigation li{display:inline-block;}
 	
 	.error, .notice, .success, .valid, .errorlist {padding:8px;margin-bottom:16px;border:2px solid #ddd;}
@@ -58,6 +55,11 @@
 	.notice a {color:#514721;}
 	.success a {color:#264409;}
 	.valid a{color:#297099;}
+	
+	/* Contain floats: h5bp.com/q */
+	.clearfix:before, .clearfix:after { content: ""; display: table; }
+	.clearfix:after { clear: both; }
+	.clearfix { *zoom: 1; border:none; }
 	
 	</style>
 </head>
@@ -70,7 +72,7 @@
 	    {% block header %}
 		      <h1><a href="/" title="{% trans "Back to homepage, " %}" class="logo" >{% trans "Evaluating Django i18n" %}</a></h1>
 		      <h2 class="baseline">{% trans "Some tests around the Django Internationalization machinery" %}</h2>
-		      <ul class="navigation success">
+		      <ul class="navigation valid">
 			      <li><a  href="{% url homepage %}" title="{% trans "Homepage" %}">{% trans "Homepage" %}</a></li>
 			      <li><a  href="{% url one %}" title="{% trans "One" %}">{% trans "One" %}</a></li>
 			      <li><a  href="{% url two %}" title="{% trans "Two" %}">{% trans "Two" %}</a></li>
