@@ -142,7 +142,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'i18nurls',
-    'django_project_i18n_demo',
+    'i18ndemo',
 )
 
 # A sample logging configuration. The only tangible logging
