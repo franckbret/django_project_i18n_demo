@@ -1,42 +1,38 @@
 {% load i18n urls_extras %}
+{% load url from future %}
 {% block sidebar %}
 <div class="notice">
 	<h3>{% trans "Actions" %}</h3>
 	<div class="notice">
 	    <form action="/i18n/setlang/" method="post">
-	    {% csrf_token %}
-	    <input name="next" type="hidden" value="/" />
-	    <select name="language">
-	    {% get_language_info_list for LANGUAGES as languages %}
-	    {% for language in languages %}
-	    <option value="{{ language.code }}">{{ language.name_local }} ({{ language.code }})</option>
-	    {% endfor %}
-	    </select>
-	    <input type="submit" value="Go" />
+		{% trans "Set your language preferences : " %}
+		{% csrf_token %}
+		<input name="next" type="hidden" value="/" />
+		<select name="language">
+		    {% get_language_info_list for LANGUAGES as languages %}
+		    {% for language in languages %}
+		    <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected="selected"{% endif %}>{{ language.name_local }} ({{ language.code }})</option>
+		    {% endfor %}
+		</select>
+		<input type="submit" value="{% trans "Change" %}" />
 	    </form>
 	</div>
 	<div class="notice">
 		<h3>{% trans "View this page page in : " %}</h3>
 		<ul>
-		{% get_available_languages as LANGUAGES %}
-			{% for language in LANGUAGES %}
-			<li>{{ language.0 }} : {{ language.1 }}</li>
-		{% endfor %}
-		<li>
-{% comment %}
-		{% trans "View this page in" %} :
-		{% for lang_code, lang_name in LANGUAGES %}
-		    {% current_url as myurl %}
-		    {% if lang_code != LANGUAGE_CODE %}
-		    {% language lang_code %}
-		    <a href="{% url myurl %}" title="{% trans "View this page in" %} {{ lang_name }}">{{ lang_name }}</a>
-		    {% endlanguage %}
-		    {% endif %}
-		{% endfor %}
-{% endcomment %}
-		</li>
-	  
-
+		    <li>
+			{% get_current_language as LANGUAGE_CODE %}
+			{% current_url as myurl %}
+			{% trans "View this page in" %} :
+			{% for lang_code, lang_name in LANGUAGES %}
+			    {% current_url as myurl %}
+			    {% if lang_code != LANGUAGE_CODE %}
+			    {% language lang_code %}
+			    <a href="{% url myurl %}" title="{% trans "View this page in" %} {{ lang_name }}">{{ lang_name }}</a>
+			    {% endlanguage %}
+			    {% endif %}
+			{% endfor %}
+		    </li>
 		</ul>
 	</div>
 </div>
@@ -63,7 +59,6 @@
 		</ul>
 	</div>
 </div>
-
 {% endblock sidebar %}
 
  

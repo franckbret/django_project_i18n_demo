@@ -12,7 +12,7 @@ from django.utils import translation
 
 register = template.Library()
 
-@register.tag
+#@register.tag
 class current_url(Tag):
     """ Return the current url name. This is convenient when we want to redirect
     to the same page in another language
@@ -38,7 +38,7 @@ class current_url(Tag):
         else:
             return output
 
-#register.tag(current_url)
+register.tag(current_url)
 
 class override(object):
     def __init__(self, language, deactivate=False):
