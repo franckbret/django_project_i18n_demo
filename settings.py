@@ -118,10 +118,10 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'django_project_i18n_demo.urls'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-  "django.core.context_processors.request",
-  "django.core.context_processors.auth",
-  "django.core.context_processors.i18n",
-  )
+    "django.core.context_processors.request",
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.i18n",
+    )
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
