@@ -106,8 +106,8 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
-    #'django.middleware.locale.LocaleMiddleware',
-    'i18nurls.middleware.I18NLocaleMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    #'i18nurls.middleware.I18NLocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,6 +131,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'i18nurls',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -141,7 +142,6 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'i18nurls',
     'i18ndemo',
 )
 
