@@ -7,5 +7,5 @@ try:
 except ImportError:
     pass
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
